@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TaxController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="75.0" prefHeight="275.0" prefWidth="350.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" text="Tax Calculator">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <GridPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.3333740234375" minWidth="10.0" prefWidth="80.33331298828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.33331298828125" minWidth="10.0" prefWidth="119.66668701171875" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Name:" />
+                  <Label text="Income:" GridPane.rowIndex="1" />
+                  <Label text="Tax %:" GridPane.rowIndex="2" />
+                  <TextField fx:id="nameTextBox" promptText="Enter Name" GridPane.columnIndex="1" />
+                  <TextField fx:id="incomeTextBox" promptText="Enter Income" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="percentTextBox" promptText="Enter Tax %" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="calcButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                  <Label fx:id="totalLabel" text="Tax Amount:" GridPane.rowIndex="4" />
+                  <TextField fx:id="totalTextBox" editable="false" promptText="Press Calculate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="nameLabel" text="Label" visible="false" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Button fx:id="clearButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleClear" text="Clear Fields" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
